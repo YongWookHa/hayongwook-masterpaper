@@ -1,4 +1,4 @@
-# Variational AutoEncoder와 VDSR을 이용한 사실적 영상 생성 기법
+# Variational AutoEncoder와 VDSR을 이용한<br/> 사실적 영상 생성 기법
 <center> 하용욱 </center>
 
 ## 요약
