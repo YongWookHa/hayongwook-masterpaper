@@ -1,4 +1,4 @@
-# Related Work
+# 2. 관련 연구
 
 ## 2.1. 생성 모델을 이용한 영상 생성 방법
 
@@ -56,6 +56,7 @@ SRCNN의 등장 이후 VDSR(Very Deep Super-Resolution)[6]은 매우 깊은 신�
 <br/> _그림 2.3 VDSR의 구조_
 
 VDSR의 구조는 매우 단순하다. 컨볼루션 계층과 ReLu 활성화 함수를 하나의 쌍으로 여러번 나열하여 깊은 컨벌루션 모델을 구성하고 마지막 계층의 결과물과 입력 영상을 요소별(element-wise)로 덧셈하는 레지듀얼 학습 기법을 사용한다.  낮은 해상도의 초기 입력 영상은 Bicubic 선형 보간법을 사용하여 목표 해상도와 일치시킨 후 모델에 사용한다. 컨볼루션 계층과 ReLu 활성화 함수의 개수는 정해지지 않았으나 개수를 늘릴수록 더 높은 성능을 발휘하지만 일반적인 경우 약 20여 쌍의 계층을 사용하도록 권장한다. 
+
 Loss Function으로는 PSNR(Peak Signal to Noise Ratio)를 사용한다. 수식 2.6은 PSNR을 나타낸다. 는 영상, 는 추정된 Noise를 의미한다.
 
 ![image](https://user-images.githubusercontent.com/12293076/48176170-4d63a700-e352-11e8-864e-74ca2164506f.png)
@@ -76,9 +77,9 @@ Gradient Clipping 기법[10]은 매우 깊은 구조의 인공 신경망 모델�
 ![image](https://user-images.githubusercontent.com/12293076/47901996-a2239f80-dec4-11e8-87ed-50b229a834d9.png)
 <br/> _그림 2.4 Gradient Exploding Problem_
 
-이러한 문제에 대처하는 한 가지 방법은 매개변수의 갱신 정도를 나타내는 학습률(Learning Rate)를 매우 작게 설정하는 것이다. 하지만 이 방법은 학습 속도를 매우 늦추고 Local Minima에 빠질 우려를 낳는다. 
+Gradient Vanishing/Exploding Problem 문제에 대처하는 한 가지 방법은 매개변수의 갱신 정도를 조절하는 학습률(Learning Rate)를 매우 작게 설정하는 것이다. 하지만 이 방법은 학습 속도를 매우 늦추고 Local Minima에 빠질 우려를 낳는다. 
 
-Gradient Clipping은 Gradient의 최댓값을 제한하고, 최대치가 넘은 Gradient의 크기를 적절히 조정해주는 것이다. 이를 통해 최적화 알고리즘은 해당 단계에서 가야하는 방향은 그대로 유지하면서 매개변수를 갱신하는 정도를 스스로 조절하게 된다. 알고리즘 2.1은 Gradient Clipping의 종류 중 하나인 Norm-Cliping의 알고리즘이다. 
+Gradient Clipping은 각 학습 단계에서 Gradient의 최댓값을 제한하고, 최대치가 넘은 Gradient의 크기를 적절히 조정해주는 것이다. 이를 통해 최적화 알고리즘은 해당 단계에서 가야하는 방향은 그대로 유지하면서 매개변수를 갱신하는 정도를 스스로 조절하게 된다. 알고리즘 2.1은 Gradient Clipping의 종류 중 하나인 Norm-Clipping의 알고리즘이다. 
 
 ![image](https://user-images.githubusercontent.com/12293076/47902078-c54e4f00-dec4-11e8-8edd-94ca26ccce91.png)
 
