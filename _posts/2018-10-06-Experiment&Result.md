@@ -1,3 +1,4 @@
+
 # 4. 실험 및 결과
 
 ## 4.1. 실험 환경 및 데이터
@@ -23,12 +24,7 @@
 
 #### 가) 생성 영상 샘플
 
-![image](https://user-images.githubusercontent.com/12293076/48464748-eb101800-e823-11e8-91c4-6c3ecd7eaa00.png)
-<br/> _그림 4.2 무작위로 선정한 생성 영상 샘플_
-
-#### 가) 영상 생성 성공 사례
-
-![image](https://user-images.githubusercontent.com/12293076/50125807-bd4c4200-02ad-11e9-9112-960302aab16d.png)
+![image](https://user-images.githubusercontent.com/12293076/50125807-bd4c4200-02ad-11e9-9112-960302aab16d.png)<br/> _그림 4.2 무작위로 선정한 생성 영상 샘플_
 
 #### 나) 영상 생성 성공 사례
 
